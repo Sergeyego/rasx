@@ -126,7 +126,16 @@ void MainWidget::calc_all()
 {
     clear_rasx();
     bool ok=true;
+    QProgressDialog progress;
+    progress.setWindowTitle(tr("Формирование отчета"));
+    progress.setAutoClose(false);
+    progress.setCancelButton(NULL);
+    progress.setMinimumDuration(0);
+    progress.setMinimum(0);
+    progress.setMaximum(modelPart->rowCount());
     for (int i=0; i<modelPart->rowCount(); i++){
+        progress.setValue(i);
+        QApplication::processEvents();
         ok = ok && addRasx(i);
         if (!ok){
             break;
@@ -161,5 +170,8 @@ void MainWidget::clear_rasx()
 
 void MainWidget::showReport()
 {
-
+    CubeWidget *w = new CubeWidget(44);
+    w->setRange(ui->dateEditBeg->date(),ui->dateEditEnd->date(),true);
+    w->setAttribute(Qt::WA_DeleteOnClose);
+    w->show();
 }

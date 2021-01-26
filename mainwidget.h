@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include "modelro.h"
+#include <QProgressDialog>
+#include "olap/cubewidget.h"
 
 namespace Ui {
 class MainWidget;
