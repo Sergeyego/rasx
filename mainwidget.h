@@ -19,11 +19,15 @@ public:
 private:
     Ui::MainWidget *ui;
     ModelRo *modelPart;
+    bool addRasx(int row);
 
 private slots:
     void upd();
     void calc_one();
     void calc_all();
+    void calc_sum();
+    void clear_rasx();
+    void showReport();
 };
 
 #endif // MAINWIDGET_H
