@@ -34,7 +34,8 @@ bool MainWidget::addRasx(int row)
     query.bindValue(":dry",modelPart->data(modelPart->index(row,9),Qt::EditRole).toDouble());
     bool ok=query.exec();
     if (!ok){
-        QMessageBox::critical(this,tr("Ошибка"),query.lastError().text(),QMessageBox::Ok);
+        QString n_s=tr("Партия ")+modelPart->data(modelPart->index(row,1),Qt::EditRole).toString()+tr(": ");
+        QMessageBox::critical(this,tr("Ошибка"),n_s+query.lastError().text(),QMessageBox::Ok);
     }
     return ok;
 }
