@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>778</width>
-    <height>746</height>
+    <width>861</width>
+    <height>769</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,6 +37,23 @@
       <widget class="DateEdit" name="dateEditEnd"/>
      </item>
      <item>
+      <widget class="QRadioButton" name="radioButtonPart">
+       <property name="text">
+        <string>По партиям</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButtonMark">
+       <property name="text">
+        <string>По маркам</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="pushButtonUpd">
        <property name="text">
         <string>Обновить</string>
@@ -44,9 +61,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="labelSum">
+      <widget class="QPushButton" name="pushButtonSave">
        <property name="text">
-        <string>Упаковано за период</string>
+        <string>Сохранить</string>
        </property>
       </widget>
      </item>
@@ -62,6 +79,13 @@
         </size>
        </property>
       </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Отчет:</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButtonAll">
@@ -86,6 +110,13 @@
      </property>
      <property name="selectionBehavior">
       <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelSum">
+     <property name="text">
+      <string>Упаковано за период</string>
      </property>
     </widget>
    </item>

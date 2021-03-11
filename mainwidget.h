@@ -30,6 +30,7 @@ private slots:
     void calc_sum();
     void clear_rasx();
     void showReport();
+    void save();
 };
 
 #endif // MAINWIDGET_H
